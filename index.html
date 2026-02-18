@@ -1,45 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two-Column Layout</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Art & Techniques | Master the Art of Shooting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
     <header>
-      <span class="site-title">My Practice Site</span>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
+        <div class="header-box">
+            <h1>Photography Art & Techniques</h1>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#techniques">Techniques</a>
+                <a href="#settings">Settings</a>
+                <a href="#submit-work">Submit Work</a>
+                <a href="#gallery">Photo Gallery</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <section class="main-content">
-        <h1>Main Content (Left Column)</h1>
-        <p></p>
-        <p></p>
-        <p></p>
-      </section>
+    <main id="home">
+        <section class="intro card">
+            <h2>Master the Art of Shooting</h2>
+            <img src="https://picsum.photos/1200/600" alt="Photographer shooting landscape with a 50mm prime lens at golden hour" class="hero-img">
+            
+            <p>Natural light photography is key to great photos. Unlike artificial lights, natural light changes all day, giving different tones and moods. The best time is golden hour - 1 hour after sunrise and 1 hour before sunset. This soft light makes landscapes and portraits look much better. Learning to use light direction (backlight, side light) can totally change your photo quality.</p>
+            
+            <h3>3 Core Principles for Beginners</h3>
+            <ul class="principles-list">
+                <li>Composition: Use rule of thirds for balanced photos</li>
+                <li>Light: Understand light quality and direction</li>
+                <li>Shutter Speed: Control motion with right settings</li>
+            </ul>
+        </section>
 
-      <aside class="sidebar">
-        <h2>Sidebar (Right Column)</h2>
-        <p></p>
-        <ul>
-          <li>Useful Link 1</li>
-          <li>Useful Link 2</li>
-          <li>Useful Link 3</li>
-        </ul>
-        <p> </p>
-      </aside>
+        <section id="techniques" class="card">
+            <h2>Key Photography Techniques</h2>
+            
+            <p>Different lenses have different uses. Prime lenses (35mm, 50mm, 85mm) are good for portraits because they have better image quality and wider apertures. Wide-angle lenses (10-24mm) work for landscapes to capture big scenes. Telephoto lenses (70-200mm+) are great for wildlife and sports photography to get close to subjects without being near them.</p>
+            
+            <p>Post-processing should improve photos without changing the original scene. Basic edits like exposure, white balance, and cropping are okay, but don't overdo saturation or contrast. Keep skin tones natural in portraits and use non-destructive editing in software like Lightroom.</p>
+            
+            <div class="link-group">
+                <p>Learn more from experts:</p>
+                <a href="https://www.nationalgeographic.com/photography" target="_blank" class="external-link">National Geographic Photography</a>
+                <a href="https://www.canon.co.uk/learn/photography" target="_blank" class="external-link">Canon Photography Guides</a>
+                <a href="https://pixabay.com" target="_blank" class="external-link">pixabay</a>
+            </div>
+
+            <div class="tips-wrapper">
+                <button id="tips-btn" class="btn">Show Photography Tips</button>
+                <div id="tips-box" class="tips-box" style="display: none;">
+                    <h3>Pro Tips</h3>
+                    <p id="tip-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="settings" class="card">
+            <h2>Camera Settings Guide</h2>
+            <div class="table-wrap">
+                <table class="settings-table">
+                    <tr>
+                        <th>Type</th>
+                        <th>Aperture</th>
+                        <th>Shutter Speed</th>
+                    </tr>
+                    <tr>
+                        <td>Portrait</td>
+                        <td>f/1.8 - f/4</td>
+                        <td>1/125s - 1/250s</td>
+                    </tr>
+                    <tr>
+                        <td>Landscape</td>
+                        <td>f/8 - f/16</td>
+                        <td>1/60s - 10s</td>
+                    </tr>
+                    <tr>
+                        <td>Street</td>
+                        <td>f/4 - f/8</td>
+                        <td>1/250s - 1/500s</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="submit-work" class="card">
+            <h2>Submit Your Photography Work</h2>
+            <form id="photo-form" class="photo-form">
+                <div class="form-group">
+                    <label for="username">Your Name:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your name" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Contact Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-type">Photo Type:</label>
+                    <select id="photo-type" name="photo-type" required class="form-input">
+                        <option value="" disabled selected>Select photo type</option>
+                        <option value="landscape">Landscape</option>
+                        <option value="portrait">Portrait</option>
+                        <option value="street">Street</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Camera Type:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="digital" name="camera" value="digital" required>
+                        <label for="digital">Digital Camera</label>
+                        <input type="radio" id="phone" name="camera" value="phone">
+                        <label for="phone">Smartphone</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to share my work for review</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo-upload">Upload Your Photo:</label>
+                    <input type="file" id="photo-upload" name="photo" accept="image/*" class="file-input">
+                    <div id="preview-box" class="preview-box" style="display: none;">
+                        <h4>Preview:</h4>
+                        <img id="preview-img" src="" alt="Photo preview" class="preview-img">
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn submit-btn">Submit Work</button>
+                    <button type="reset" class="btn reset-btn">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="gallery" class="card">
+            <h2>Submitted Photos Gallery</h2>
+            <div id="gallery-container" class="gallery-container">
+                <p class="empty-msg">No photos submitted yet. Upload your work above!</p>
+            </div>
+        </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 My Practice Site | All Rights Reserved</p>
+    <footer class="footer">
+        <p>&copy; 2026 Photography Art & Techniques | All Rights Reserved</p>
     </footer>
-  </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
