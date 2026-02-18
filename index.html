@@ -23,10 +23,27 @@
     <main id="home">
         <section class="intro card">
             <h2>Master the Art of Shooting</h2>
-            <img src="https://picsum.photos/1200/600" alt="Photographer shooting landscape with a 50mm prime lens at golden hour" class="hero-img">
-            
-            <p>Natural light photography is key to great photos. Unlike artificial lights, natural light changes all day, giving different tones and moods. The best time is golden hour - 1 hour after sunrise and 1 hour before sunset. This soft light makes landscapes and portraits look much better. Learning to use light direction (backlight, side light) can totally change your photo quality.</p>
-            
+
+            <img src="https://picsum.photos/1200/600"
+                 alt="Photographer shooting landscape with a 50mm prime lens at golden hour"
+                 class="hero-img">
+
+            <p>
+                Natural light photography is key to great photos. Unlike artificial lights, natural light changes all day,
+                giving different tones and moods. The best time is golden hour - 1 hour after sunrise and 1 hour before sunset.
+                This soft light makes landscapes and portraits look much better.
+            </p>
+
+            <p>
+                Learning to use light direction (backlight, side light) can totally change your photo quality. With a little practice,
+                you’ll start noticing how light shapes faces, textures, and the overall mood of a scene.
+            </p>
+
+            <p>
+                Beginners should focus on a few core skills first: composition, understanding light, and controlling exposure with
+                shutter speed and aperture. Small improvements here create big changes in your results.
+            </p>
+
             <h3>3 Core Principles for Beginners</h3>
             <ul class="principles-list">
                 <li>Composition: Use rule of thirds for balanced photos</li>
@@ -37,21 +54,34 @@
 
         <section id="techniques" class="card">
             <h2>Key Photography Techniques</h2>
-            
-            <p>Different lenses have different uses. Prime lenses (35mm, 50mm, 85mm) are good for portraits because they have better image quality and wider apertures. Wide-angle lenses (10-24mm) work for landscapes to capture big scenes. Telephoto lenses (70-200mm+) are great for wildlife and sports photography to get close to subjects without being near them.</p>
-            
-            <p>Post-processing should improve photos without changing the original scene. Basic edits like exposure, white balance, and cropping are okay, but don't overdo saturation or contrast. Keep skin tones natural in portraits and use non-destructive editing in software like Lightroom.</p>
-            
+
+            <p>
+                Different lenses have different uses. Prime lenses (35mm, 50mm, 85mm) are good for portraits because they have better
+                image quality and wider apertures. Wide-angle lenses (10-24mm) work for landscapes to capture big scenes.
+            </p>
+
+            <p>
+                Telephoto lenses (70-200mm+) are great for wildlife and sports photography to get close to subjects without being near them.
+                Choose your lens based on your subject and the story you want to tell.
+            </p>
+
+            <p>
+                Post-processing should improve photos without changing the original scene. Basic edits like exposure, white balance,
+                and cropping are okay, but don't overdo saturation or contrast. Keep skin tones natural in portraits.
+            </p>
+
             <div class="link-group">
                 <p>Learn more from experts:</p>
                 <a href="https://www.nationalgeographic.com/photography" target="_blank" class="external-link">National Geographic Photography</a>
                 <a href="https://www.canon.co.uk/learn/photography" target="_blank" class="external-link">Canon Photography Guides</a>
-                <a href="https://pixabay.com" target="_blank" class="external-link">pixabay</a>
+                <a href="https://pixabay.com" target="_blank" class="external-link">Pixabay (Free Photos)</a>
             </div>
 
             <div class="tips-wrapper">
-                <button id="tips-btn" class="btn">Show Photography Tips</button>
-                <div id="tips-box" class="tips-box" style="display: none;">
+                <button id="tips-btn" class="btn" type="button">Show Photography Tips</button>
+
+                
+                <div id="tips-box" class="tips-box hidden">
                     <h3>Pro Tips</h3>
                     <p id="tip-text"></p>
                 </div>
@@ -62,32 +92,37 @@
             <h2>Camera Settings Guide</h2>
             <div class="table-wrap">
                 <table class="settings-table">
-                    <tr>
-                        <th>Type</th>
-                        <th>Aperture</th>
-                        <th>Shutter Speed</th>
-                    </tr>
-                    <tr>
-                        <td>Portrait</td>
-                        <td>f/1.8 - f/4</td>
-                        <td>1/125s - 1/250s</td>
-                    </tr>
-                    <tr>
-                        <td>Landscape</td>
-                        <td>f/8 - f/16</td>
-                        <td>1/60s - 10s</td>
-                    </tr>
-                    <tr>
-                        <td>Street</td>
-                        <td>f/4 - f/8</td>
-                        <td>1/250s - 1/500s</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Aperture</th>
+                            <th>Shutter Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Portrait</td>
+                            <td>f/1.8 - f/4</td>
+                            <td>1/125s - 1/250s</td>
+                        </tr>
+                        <tr>
+                            <td>Landscape</td>
+                            <td>f/8 - f/16</td>
+                            <td>1/60s - 10s</td>
+                        </tr>
+                        <tr>
+                            <td>Street</td>
+                            <td>f/4 - f/8</td>
+                            <td>1/250s - 1/500s</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </section>
 
         <section id="submit-work" class="card">
             <h2>Submit Your Photography Work</h2>
+
             <form id="photo-form" class="photo-form">
                 <div class="form-group">
                     <label for="username">Your Name:</label>
@@ -115,6 +150,7 @@
                     <div class="radio-group">
                         <input type="radio" id="digital" name="camera" value="digital" required>
                         <label for="digital">Digital Camera</label>
+
                         <input type="radio" id="phone" name="camera" value="phone">
                         <label for="phone">Smartphone</label>
                     </div>
@@ -128,7 +164,8 @@
                 <div class="form-group">
                     <label for="photo-upload">Upload Your Photo:</label>
                     <input type="file" id="photo-upload" name="photo" accept="image/*" class="file-input">
-                    <div id="preview-box" class="preview-box" style="display: none;">
+
+                    <div id="preview-box" class="preview-box hidden">
                         <h4>Preview:</h4>
                         <img id="preview-img" src="" alt="Photo preview" class="preview-img">
                     </div>
